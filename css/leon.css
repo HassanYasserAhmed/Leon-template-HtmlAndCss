@@ -1,0 +1,342 @@
+/* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  }
+  .links {
+    display : flex ;
+    flex-wrap: wrap;
+    width: 50px;
+  height:  20px;
+    position:relative;
+  justify-content:  flex-end;
+}
+.links span {
+  width:100%;
+    height: 5px;
+    background-color: var( --secondary-color);
+    position:absolute ;
+    
+}
+
+.links span:nth-child(2) {
+  margin-top:  10px;
+  width: 50%;
+  
+}
+
+.links span:last-child{
+  margin-top:  20px;
+  width: 100%;
+  
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    
+}
+ .header .countainer {
+margin: 0 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+}
+ul {
+    border: 2px solid var(--secondary-color) ;
+    background-color:#eee ;
+    right:  100px;
+     position:absolute ;
+     list-style:  none;
+     padding: 0;
+     width: 130px;
+     text-align:  center;
+     display:  none;
+     z-index: 1;
+}
+
+ul li  a {
+    text-decoration : none;
+     color: var(--secondary-color );
+     
+     transition: 0.3s
+}
+ul li {
+   padding-bottom:  5px;
+   border-top: 2px solid var( --secondary-color );
+   
+}
+ul li:first-child {
+    border:  none;
+}
+ul::after {
+    content: "";
+    position:absolute ;
+    border: 10px solid;
+    border-color: transparent transparent #eee transparent;
+    right:0 ;
+    top: -21px;
+    z-index:  -1;
+}
+.header   {
+    background-color : #ddd;
+}
+.links:hover span:nth-child(2) {
+    width: 100%;
+}
+ul li:hover{
+    background-color: var( --secondary-color );
+    
+}
+ul li:hover a {
+    color: white;
+}
+
+.links-content:hover ul {
+    display: block;
+}
+li:hover a{
+    margin-left: 40px;
+}
+.links span {
+    transition : 0.3s;
+}
+.landing-content {
+width:  100%;
+height:  100vh;
+    background-image:url('../images/Mountain.jpeg');
+    background-size:cover;
+    display: flex;
+    justify-content:  center;
+    align-items:  center;
+    position:relative ;
+}
+
+.landing-content .text-intro {
+    text-align:  center;
+    
+    position:absolute ;
+}
+@media(max-width: 797px){
+    .landing-content .text-intro {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.futures .countainer {
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(300px, 1fr));
+    
+}
+.futures .countainer .col {
+    background-color : #eee;
+    text-align:  center;
+    
+}
+.services {
+   margin-top:  100px; 
+   margin-bottom:  100px;
+}
+.special-heading ,
+.special-heading + p{
+    text-align:  center;
+    margin:0 ;
+    padding:0;
+}
+.special-heading {
+    font-size : 50px;
+    font-weight : 800;
+    opacity: 0.1;
+     
+}
+
+.special-heading + p {
+    margin-top: -20px;
+    color: var(--secondary-color);
+    margin-bottom:  50px;
+}
+.services-content {
+    display: grid ;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   } 
+.ser{
+    text-align:  center;
+} 
+
+.col .image {
+    
+}
+.col .image {
+   margin-left: 60px;
+    width:  100%  ;
+    
+}
+@media(min-width:797px){
+   .col .image {
+       
+   }
+}
+.portfolio {
+    margin-top:  100px;
+}
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px, 1fr));
+    grid-gap: 20px;
+    
+}
+.portfolio .countainer  .card img {
+    width: 100%;
+}
+
+.portfolio .countainer  .card .text {
+    text-align:  center;
+}
+
+
+.portfolio .countainer  .special-heading  {
+    text-align:  center;
+}
+.about-content {
+ /*   display:  grid;
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    display: flex ;
+    justify-content:space-between;
+    
+}
+.about,
+.contact,
+.futures,
+.services,
+.portfolio{
+    margin: 100px 0;
+}
+
+.about-content,
+.contact-content,
+.futures-content,
+.services-content,
+.portfolio-content {
+    margin-top:  100px;
+}
+
+.about-content .image{
+ position:relative ;
+   
+}
+.about-content .image img {
+    width: 300px;
+    height: 300px;
+    
+}
+.about-content .text-info {
+    text-align:  center;
+    diaplay: flex;
+    flex-wrap: wrap;
+    padding-left:  20px;
+}
+
+.about-content .text-info p:first-child {
+    font-weight: bold;
+}
+
+.about-content .text-info p:last-child  {
+    color:  var(--secondary-color);
+}
+
+.about-content .text-info hr {
+    width:  50%;
+    border-color:  var(--main-color);
+}
+@media(max-width:797px){
+    .about-content {
+        display:  flex;
+        flex-direction:  column;
+    }
+    .about-content .image img {
+        margin-left: 60px;
+    }
+     .about-content .image::before,
+      .about-content .image::after {
+          display:  none;
+      }
+}
+
+
+
+   .about-content .image::after{
+       width: 100px;
+       position:absolute;
+       content: " ";
+       height: 360px;
+       border-left: 100px solid var( --main-color);
+       border-bottom: 50px solid var( --main-color);
+       top: -30px;
+       right: -120px;
+       z-index:  -1;
+          }
+          
+           .about-content .image::before {
+               content: "";
+               position:absolute;
+               width:  100px;
+               height:  360px;
+               background-color:  var( --main-color);
+               top:-30px ;
+               left:  30px;
+               z-index:  -1;
+           
+           }
+             .contact-content{
+               text-align:  center ;
+           }
+           .contact-content h2 {
+               color:  var( --secondary-color);
+               font-weight  800;
+               font-size : 30px;
+               letter-spacing: -2px;
+               margin-bottom: 10px;
+           }
+           
+           
+            .contact-content a {
+            margin:  0;
+                text-decoration :none;
+                color:  var( --main-color);
+                font-weight : 800;
+                font-size: 25px;
+            } 
+            .social {
+                margin-top: 10px;
+            }
+            .footer {
+                text-align:  center;
+                background-color: var( --secondary-color);
+                color: white;
+                padding: 10px;
+            }
+            
+.footer span {
+    color: var( --main-color);
+}
+.footer .social  i {
+    margin-left: 3px;
+}
